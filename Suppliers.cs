@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BookstoreManagementSystem
 {
-    public partial class Users : Form
+    public partial class Suppliers : Form
     {
-        public Users()
+        public Suppliers()
         {
             InitializeComponent();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Users_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
