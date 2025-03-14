@@ -55,6 +55,8 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,6 +65,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button8);
@@ -372,6 +376,86 @@
             this.button13.Text = "Books";
             this.button13.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Literary ",
+            "Fiction",
+            "",
+            "Mystery & Thriller",
+            "",
+            "Science Fiction",
+            "",
+            "Fantasy",
+            "",
+            "Romance",
+            "Historical ",
+            "Fiction",
+            "",
+            "Horror",
+            "",
+            "Adventure",
+            "",
+            "Contemporary",
+            "Fiction",
+            "",
+            "Dystopian",
+            "",
+            "Magical ",
+            "Realism",
+            "",
+            "Biography & Memoir",
+            "",
+            "Self-Help & Personal ",
+            "Development",
+            "",
+            "Business & Finance",
+            "",
+            "Health & Wellness",
+            "",
+            "Science & Technology",
+            "",
+            "History",
+            "",
+            "Philosophy",
+            "",
+            "Psychology",
+            "",
+            "Travel",
+            "",
+            "True Crime",
+            "",
+            "Textbooks",
+            "",
+            "Research & Reference",
+            "",
+            "Law",
+            "",
+            "Medicine & Healthcare",
+            "",
+            "Engineering",
+            "",
+            "Mathematics",
+            "",
+            "Political "});
+            this.comboBox1.Location = new System.Drawing.Point(667, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(249, 37);
+            this.comboBox1.TabIndex = 35;
+            this.comboBox1.Text = "Select Categories";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(662, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Catrgories";
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,5 +505,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
