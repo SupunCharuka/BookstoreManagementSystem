@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace BookstoreManagementSystem
 {
-    public partial class Orders : Form
+    public partial class OrderDetails : Form
     {
-        public Orders()
+        public OrderDetails()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
