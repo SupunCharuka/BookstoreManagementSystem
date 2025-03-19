@@ -46,8 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -55,6 +53,8 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -262,30 +262,6 @@
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 6;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(49, 559);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 41);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Sales";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(49, 335);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 41);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Suppliers";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SkyBlue;
@@ -303,7 +279,7 @@
             this.button9.BackColor = System.Drawing.Color.SkyBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(49, 178);
+            this.button9.Location = new System.Drawing.Point(49, 246);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(240, 41);
             this.button9.TabIndex = 45;
@@ -339,11 +315,11 @@
             this.button12.BackColor = System.Drawing.Color.SkyBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(49, 104);
+            this.button12.Location = new System.Drawing.Point(49, 172);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(240, 41);
             this.button12.TabIndex = 41;
-            this.button12.Text = "Users";
+            this.button12.Text = "Staff";
             this.button12.UseVisualStyleBackColor = false;
             // 
             // button13
@@ -351,7 +327,7 @@
             this.button13.BackColor = System.Drawing.Color.SkyBlue;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(49, 255);
+            this.button13.Location = new System.Drawing.Point(49, 15);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(240, 41);
             this.button13.TabIndex = 40;
@@ -363,12 +339,36 @@
             this.button14.BackColor = System.Drawing.Color.SkyBlue;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(49, 23);
+            this.button14.Location = new System.Drawing.Point(49, 91);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(240, 41);
             this.button14.TabIndex = 39;
             this.button14.Text = "Books";
             this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(49, 559);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 41);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Sales";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(49, 335);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(240, 41);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Suppliers";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // Suppliers
             // 

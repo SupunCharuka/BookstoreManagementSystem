@@ -48,8 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -57,6 +55,8 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -117,9 +117,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(420, 349);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 25);
+            this.label9.Size = new System.Drawing.Size(97, 25);
             this.label9.TabIndex = 34;
-            this.label9.Text = "Users List";
+            this.label9.Text = "Staff List";
             // 
             // dataGridView1
             // 
@@ -280,38 +280,14 @@
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 4;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(49, 333);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 41);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Suppliers";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(49, 104);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(240, 41);
-            this.button11.TabIndex = 20;
-            this.button11.Text = "Users";
-            this.button11.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -330,7 +306,7 @@
             this.button9.BackColor = System.Drawing.Color.SkyBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(49, 178);
+            this.button9.Location = new System.Drawing.Point(49, 257);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(240, 41);
             this.button9.TabIndex = 54;
@@ -366,7 +342,7 @@
             this.button13.BackColor = System.Drawing.Color.SkyBlue;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(49, 255);
+            this.button13.Location = new System.Drawing.Point(49, 18);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(240, 41);
             this.button13.TabIndex = 50;
@@ -378,7 +354,7 @@
             this.button14.BackColor = System.Drawing.Color.SkyBlue;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(49, 23);
+            this.button14.Location = new System.Drawing.Point(49, 102);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(240, 41);
             this.button14.TabIndex = 49;
@@ -397,6 +373,30 @@
             this.button1.Text = "Sales";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SkyBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(49, 333);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(240, 41);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Suppliers";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(49, 183);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(240, 41);
+            this.button11.TabIndex = 20;
+            this.button11.Text = "Staff";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,7 +408,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Users";
+            this.Text = "Staff";
             this.Load += new System.EventHandler(this.Users_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

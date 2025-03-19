@@ -50,7 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -370,24 +370,24 @@
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 2;
             // 
-            // button13
+            // button3
             // 
-            this.button13.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(49, 23);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(240, 41);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "Books";
-            this.button13.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.SkyBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(49, 413);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(240, 41);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "Orders";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.SkyBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(49, 178);
+            this.button9.Location = new System.Drawing.Point(49, 257);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(240, 41);
             this.button9.TabIndex = 36;
@@ -447,36 +447,37 @@
             this.button11.BackColor = System.Drawing.Color.SkyBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(49, 104);
+            this.button11.Location = new System.Drawing.Point(49, 183);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(240, 41);
             this.button11.TabIndex = 30;
-            this.button11.Text = "Users";
+            this.button11.Text = "Staff";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.SkyBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(49, 255);
+            this.button12.Location = new System.Drawing.Point(49, 18);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(240, 41);
             this.button12.TabIndex = 29;
             this.button12.Text = "Dashboard";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // button13
             // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(49, 413);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 41);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Orders";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button13.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(49, 102);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(240, 41);
+            this.button13.TabIndex = 18;
+            this.button13.Text = "Books";
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // Books
             // 

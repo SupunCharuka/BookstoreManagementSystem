@@ -33,7 +33,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(49, 258);
+            this.button2.Location = new System.Drawing.Point(49, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 41);
             this.button2.TabIndex = 9;
@@ -104,24 +104,12 @@
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 6;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SkyBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(49, 413);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(240, 41);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Orders";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.SkyBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(49, 178);
+            this.button9.Location = new System.Drawing.Point(49, 245);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(240, 41);
             this.button9.TabIndex = 36;
@@ -181,11 +169,11 @@
             this.button11.BackColor = System.Drawing.Color.SkyBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(49, 104);
+            this.button11.Location = new System.Drawing.Point(49, 171);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(240, 41);
             this.button11.TabIndex = 30;
-            this.button11.Text = "Users";
+            this.button11.Text = "Staff";
             this.button11.UseVisualStyleBackColor = false;
             // 
             // button13
@@ -193,12 +181,24 @@
             this.button13.BackColor = System.Drawing.Color.SkyBlue;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(49, 23);
+            this.button13.Location = new System.Drawing.Point(49, 90);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(240, 41);
             this.button13.TabIndex = 28;
             this.button13.Text = "Books";
             this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.SkyBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(49, 413);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(240, 41);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Orders";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
