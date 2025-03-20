@@ -45,12 +45,12 @@ namespace BookstoreManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
+            string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter both email and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -58,9 +58,9 @@ namespace BookstoreManagementSystem
             try
             {
                 connection.Open(); 
-                string query = "SELECT Role FROM Users WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT Role FROM Users WHERE Email = @Email AND Password = @Password";
                 MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Username", email);
                 command.Parameters.AddWithValue("@Password", hashedPassword);
 
                 MySqlDataReader reader = command.ExecuteReader();

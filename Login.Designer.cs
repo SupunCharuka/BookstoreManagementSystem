@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtPassword);
-            this.panel2.Controls.Add(this.txtUsername);
+            this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(275, 12);
@@ -133,9 +133,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(63, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 25);
+            this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "User Name";
+            this.label2.Text = "Email";
             // 
             // txtPassword
             // 
@@ -146,13 +146,13 @@
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(68, 215);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(240, 34);
-            this.txtUsername.TabIndex = 3;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(68, 215);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(240, 34);
+            this.txtEmail.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
