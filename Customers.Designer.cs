@@ -30,19 +30,19 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.brnDelete = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,19 +62,19 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.dgvCustomers);
+            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this.brnDelete);
+            this.panel2.Controls.Add(this.btnReset);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtAddress);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtPhone);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtCustomerName);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.exitBtn);
             this.panel2.Location = new System.Drawing.Point(345, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(974, 701);
@@ -90,64 +90,69 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Customers List";
             // 
-            // dataGridView1
+            // dgvCustomers
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 390);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(915, 297);
-            this.dataGridView1.TabIndex = 32;
+            this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Location = new System.Drawing.Point(27, 390);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.RowHeadersWidth = 51;
+            this.dgvCustomers.RowTemplate.Height = 24;
+            this.dgvCustomers.Size = new System.Drawing.Size(915, 297);
+            this.dgvCustomers.TabIndex = 32;
+            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
-            // button8
+            // btnEdit
             // 
-            this.button8.BackColor = System.Drawing.Color.Moccasin;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(283, 269);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(166, 42);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Edit";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.Moccasin;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(283, 269);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(166, 42);
+            this.btnEdit.TabIndex = 31;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button7
+            // brnDelete
             // 
-            this.button7.BackColor = System.Drawing.Color.Moccasin;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(514, 269);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(166, 42);
-            this.button7.TabIndex = 30;
-            this.button7.Text = "Delete";
-            this.button7.UseVisualStyleBackColor = false;
+            this.brnDelete.BackColor = System.Drawing.Color.Moccasin;
+            this.brnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnDelete.Location = new System.Drawing.Point(514, 269);
+            this.brnDelete.Name = "brnDelete";
+            this.brnDelete.Size = new System.Drawing.Size(166, 42);
+            this.brnDelete.TabIndex = 30;
+            this.brnDelete.Text = "Delete";
+            this.brnDelete.UseVisualStyleBackColor = false;
+            this.brnDelete.Click += new System.EventHandler(this.brnDelete_Click);
             // 
-            // button6
+            // btnReset
             // 
-            this.button6.BackColor = System.Drawing.Color.Moccasin;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(750, 269);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(166, 42);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Reset";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.Moccasin;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(750, 269);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(166, 42);
+            this.btnReset.TabIndex = 29;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // button5
+            // btnSave
             // 
-            this.button5.BackColor = System.Drawing.Color.Moccasin;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(47, 269);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 42);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Moccasin;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(47, 269);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(166, 42);
+            this.btnSave.TabIndex = 28;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
             // 
@@ -159,13 +164,13 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Address";
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(680, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 34);
-            this.textBox2.TabIndex = 24;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(680, 109);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(240, 34);
+            this.txtAddress.TabIndex = 24;
             // 
             // label7
             // 
@@ -177,13 +182,13 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Phone";
             // 
-            // textBox5
+            // txtPhone
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(360, 109);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(240, 34);
-            this.textBox5.TabIndex = 19;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(360, 109);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(240, 34);
+            this.txtPhone.TabIndex = 19;
             // 
             // label2
             // 
@@ -195,13 +200,13 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Customer Name";
             // 
-            // textBox1
+            // txtCustomerName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(27, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 34);
-            this.textBox1.TabIndex = 11;
+            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(27, 109);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(240, 34);
+            this.txtCustomerName.TabIndex = 11;
             // 
             // label1
             // 
@@ -213,15 +218,16 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "BookHaven ";
             // 
-            // label5
+            // exitBtn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(934, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 36);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "X";
+            this.exitBtn.AutoSize = true;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(934, 0);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(37, 36);
+            this.exitBtn.TabIndex = 9;
+            this.exitBtn.Text = "X";
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // panel1
             // 
@@ -361,9 +367,10 @@
             this.Name = "Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.Customers_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -373,19 +380,19 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button brnDelete;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label exitBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button9;
