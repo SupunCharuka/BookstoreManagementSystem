@@ -22,6 +22,7 @@ namespace BookstoreManagementSystem
             InitializeComponent();
             LoadCustomers();
             LoadBooks();
+            LoadDeliveryOptions();
             printDocument.PrintPage += printDocument1_PrintPage;
 
         }
@@ -65,6 +66,13 @@ namespace BookstoreManagementSystem
 
                 }
             }
+        }
+
+        private void LoadDeliveryOptions()
+        {
+            // Add delivery options to the ComboBox
+            cmbDeliveryOption.Items.AddRange(new string[] { "In-Store Pickup", "Home Delivery" });
+            cmbDeliveryOption.SelectedIndex = -1; // Clear selection
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -180,14 +188,21 @@ namespace BookstoreManagementSystem
                 return;
             }
 
+            if (cmbDeliveryOption.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a delivery option.");
+                return;
+            }
+
             int customerId = (int)cmbCustomer.SelectedValue;
             decimal totalAmount = orderItems.Sum(item => item.TotalPrice);
+            string deliveryOption = cmbDeliveryOption.SelectedItem.ToString();
             DateTime orderDate = DateTime.Now;
 
             // Save Order
             string orderQuery = $@"
-            INSERT INTO Orders (CustomerId, OrderDate, TotalAmount, PaymentStatus)
-            VALUES (@CustomerId, @OrderDate, @TotalAmount, @PaymentStatus);
+            INSERT INTO Orders (CustomerId, OrderDate, TotalAmount, PaymentStatus, DeliveryOption)
+            VALUES (@CustomerId, @OrderDate, @TotalAmount, @PaymentStatus, @DeliveryOption);
             SELECT LAST_INSERT_ID();";
 
             int orderId = 0;
@@ -201,7 +216,7 @@ namespace BookstoreManagementSystem
                     cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
                     cmd.Parameters.AddWithValue("@OrderDate", orderDate);
                     cmd.Parameters.AddWithValue("@PaymentStatus", cmbPaymentStatus.Text);
-             
+                    cmd.Parameters.AddWithValue("@DeliveryOption", deliveryOption);
 
                     orderId = Convert.ToInt32(cmd.ExecuteScalar());
                 }
@@ -250,6 +265,7 @@ namespace BookstoreManagementSystem
             cmbCustomer.SelectedIndex = -1;
             lblCustomerId.Clear();
             lblPhoneNumber.Clear();
+            cmbDeliveryOption.SelectedIndex = -1;
         }
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
@@ -427,6 +443,10 @@ namespace BookstoreManagementSystem
 
             // Draw payment status
             e.Graphics.DrawString($"Payment Status: {cmbPaymentStatus.Text}", headerFont, accentBrush, startX, startY);
+            startY += offset / 2;
+
+            // Draw delivery option
+            e.Graphics.DrawString($"Delivery Option: {cmbDeliveryOption.Text}", headerFont, accentBrush, startX, startY);
             startY += offset;
 
             // Draw a horizontal line

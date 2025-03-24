@@ -82,6 +82,8 @@
             this.exitBtn = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.cmbDeliveryOption = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -380,6 +382,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
+            this.panel3.Controls.Add(this.cmbDeliveryOption);
+            this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.lblPhoneNumber);
             this.panel3.Controls.Add(this.lblCustomerId);
@@ -706,6 +710,30 @@
             // 
             this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // cmbDeliveryOption
+            // 
+            this.cmbDeliveryOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.cmbDeliveryOption.FormattingEnabled = true;
+            this.cmbDeliveryOption.Items.AddRange(new object[] {
+            "Pending",
+            "Completed",
+            "Rejectes"});
+            this.cmbDeliveryOption.Location = new System.Drawing.Point(499, 487);
+            this.cmbDeliveryOption.Name = "cmbDeliveryOption";
+            this.cmbDeliveryOption.Size = new System.Drawing.Size(186, 37);
+            this.cmbDeliveryOption.TabIndex = 65;
+            this.cmbDeliveryOption.Text = "Select Delivery";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(494, 459);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(160, 25);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Delivery Option";
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -785,5 +813,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox lblPhoneNumber;
         private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.ComboBox cmbDeliveryOption;
+        private System.Windows.Forms.Label label11;
     }
 }
