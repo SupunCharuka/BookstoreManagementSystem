@@ -116,11 +116,6 @@ namespace BookstoreManagementSystem
             string bookTitle = ((DataRowView)listBooks.SelectedItem)["Title"] as string;
             string author = ((DataRowView)listBooks.SelectedItem)["Author"] as string;
 
-            if (!decimal.TryParse(txtDiscount.Text, out decimal discount) || discount < 0 || discount > 100)
-            {
-                MessageBox.Show("Please enter a valid discount percentage (0-100).");
-                return;
-            }
 
             var orderItem = new OrderItem
             {
@@ -128,8 +123,7 @@ namespace BookstoreManagementSystem
                 BookTitle = bookTitle,
                 Author = author,
                 Quantity = quantity,
-                Price = price,
-                Discount = discount
+                Price = price
                
             };
             orderItems.Add(orderItem);
@@ -139,7 +133,6 @@ namespace BookstoreManagementSystem
 
             listBooks.SelectedIndex = -1; 
             txtQuantity.Clear();
-            txtDiscount.Clear();
             lblAuthor.Clear();
             lblPrice.Clear();
         }
@@ -159,7 +152,6 @@ namespace BookstoreManagementSystem
             dgvOrderItems.Columns["Author"].HeaderText = "Author";
             dgvOrderItems.Columns["Quantity"].HeaderText = "Qty";
             dgvOrderItems.Columns["Price"].HeaderText = "Price";
-            dgvOrderItems.Columns["Discount"].HeaderText = "Discount (%)";
             dgvOrderItems.Columns["TotalPrice"].HeaderText = "Total Price";
 
             // Format the columns
@@ -219,8 +211,8 @@ namespace BookstoreManagementSystem
             foreach (var item in orderItems)
             {
                 string itemQuery = $@"
-                INSERT INTO OrderItems (OrderId, BookId, Quantity, Price, Discount, TotalPrice)
-                VALUES (@OrderId, @BookId, @Quantity, @Price, @Discount, @TotalPrice)";
+                INSERT INTO OrderItems (OrderId, BookId, Quantity, Price, TotalPrice)
+                VALUES (@OrderId, @BookId, @Quantity, @Price, @TotalPrice)";
 
                 using (MySqlConnection conn = new MySqlConnection(con))
                 {
@@ -231,7 +223,6 @@ namespace BookstoreManagementSystem
                         cmd.Parameters.AddWithValue("@BookId", item.BookId);
                         cmd.Parameters.AddWithValue("@Quantity", item.Quantity);
                         cmd.Parameters.AddWithValue("@Price", item.Price);
-                        cmd.Parameters.AddWithValue("@Discount", item.Discount);
                         cmd.Parameters.AddWithValue("@TotalPrice", item.TotalPrice);
                         cmd.ExecuteNonQuery();
                     }
@@ -247,7 +238,6 @@ namespace BookstoreManagementSystem
             ClearForm();
             listBooks.SelectedIndex = -1;
             txtQuantity.Clear();
-            txtDiscount.Clear();
             lblAuthor.Clear();
             lblPrice.Clear();
            
@@ -257,7 +247,6 @@ namespace BookstoreManagementSystem
             orderItems.Clear();
             UpdateOrderItemsGrid();
             txtTotalAmount.Text = "0.00";
-            txtDiscount.Clear();
             cmbCustomer.SelectedIndex = -1;
             lblCustomerId.Clear();
             lblPhoneNumber.Clear();
@@ -462,7 +451,6 @@ namespace BookstoreManagementSystem
         public string Author { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public decimal Discount { get; set; } 
-        public decimal TotalPrice => Quantity * Price * (1 - Discount / 100); 
+        public decimal TotalPrice => Quantity * Price;
     }
 }
