@@ -345,7 +345,8 @@ namespace BookstoreManagementSystem
                 }
                 else
                 {
-                   
+                    lblCustomerId.Text = " ";
+                    lblPhoneNumber.Text = " ";
                 }
             }
         }
@@ -379,8 +380,8 @@ namespace BookstoreManagementSystem
             Brush accentBrush = new SolidBrush(Color.DarkBlue);
 
             // Define starting position
-            int startX = 60;
-            int startY = 60;
+            int startX = 150;
+            int startY = 150;
             int offset = 50;
 
             // Draw the title with a creative design
