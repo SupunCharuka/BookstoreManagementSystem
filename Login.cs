@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BookstoreManagementSystem
 {
@@ -45,10 +46,10 @@ namespace BookstoreManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim();
+            string username = txtUserName.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both email and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -58,15 +59,17 @@ namespace BookstoreManagementSystem
             try
             {
                 connection.Open(); 
-                string query = "SELECT Role FROM Users WHERE Email = @Email AND Password = @Password";
+                string query = "SELECT Role FROM Users WHERE Username = @Username AND Password = @Password";
                 MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", email);
+                command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", hashedPassword);
 
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
                     string role = reader["Role"].ToString();
+                    UserSession.CurrentUserId = reader.GetInt32("id");
+                    UserSession.Username = reader.GetString("Username");
                     OpenDashboard(role); 
                 }
                 else
@@ -118,5 +121,16 @@ namespace BookstoreManagementSystem
         {
 
         }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public static class UserSession
+    {
+        public static int CurrentUserId { get; set; }
+        public static string Username { get; set; }
+        // Add other user properties as needed
     }
 }
