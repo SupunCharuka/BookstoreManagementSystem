@@ -58,8 +58,8 @@ namespace BookstoreManagementSystem
             string hashedPassword = HashPassword(password);
             try
             {
-                connection.Open(); 
-                string query = "SELECT Role FROM Users WHERE Username = @Username AND Password = @Password";
+                connection.Open();
+                string query = "SELECT Id, Username, Role FROM Users WHERE Username = @Username AND Password = @Password";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", hashedPassword);
@@ -67,9 +67,9 @@ namespace BookstoreManagementSystem
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    string role = reader["Role"].ToString();
-                    UserSession.CurrentUserId = reader.GetInt32("id");
+                    UserSession.CurrentUserId = reader.GetInt32("Id");
                     UserSession.Username = reader.GetString("Username");
+                    string role = reader["Role"].ToString();
                     OpenDashboard(role); 
                 }
                 else
@@ -125,6 +125,21 @@ namespace BookstoreManagementSystem
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
+
+            
+            if (!txtPassword.UseSystemPasswordChar)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
     public static class UserSession

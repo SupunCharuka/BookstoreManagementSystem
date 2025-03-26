@@ -52,6 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.panel1.SuspendLayout();
@@ -142,7 +142,7 @@
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
             "Admin",
-            "Sales Clerk"});
+            "SalesClerk"});
             this.cmbRole.Location = new System.Drawing.Point(27, 289);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(249, 37);
@@ -346,6 +346,18 @@
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 4;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SkyBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(49, 563);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(240, 41);
+            this.button5.TabIndex = 56;
+            this.button5.Text = "Reports";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SkyBlue;
@@ -441,18 +453,6 @@
             this.button11.TabIndex = 20;
             this.button11.Text = "Staff";
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(49, 563);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 41);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "Reports";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // Users
             // 
