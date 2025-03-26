@@ -105,6 +105,13 @@ namespace BookstoreManagementSystem
                 return;
             }
 
+            if (IsUsernameExists(username))
+            {
+                MessageBox.Show("Username already exists. Please choose a different username.",
+                               "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             // Hash the password
             string hashedPassword = HashPassword(password);
@@ -187,6 +194,27 @@ namespace BookstoreManagementSystem
             }
         }
 
+        private bool IsUsernameExists(string username)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(con))
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -242,6 +270,18 @@ namespace BookstoreManagementSystem
             {
                 MessageBox.Show("Email is already used by another user.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+
+            var currentRow = dataGridViewUsers.CurrentRow;
+            if (currentRow != null)
+            {
+                string originalUsername = currentRow.Cells["Username"].Value.ToString();
+                if (username != originalUsername && IsUsernameExists(username))
+                {
+                    MessageBox.Show("Username already exists. Please choose a different username.",
+                                  "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
             // Hash the password
@@ -329,12 +369,14 @@ namespace BookstoreManagementSystem
             return existingPassword;
         }
 
+        private string originalUsername = string.Empty;
         private void dataGridViewUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridViewUsers.Rows[e.RowIndex];
-                txtUsername.Text = row.Cells["Username"].Value.ToString();
+                originalUsername = row.Cells["Username"].Value.ToString();
+                txtUsername.Text = originalUsername;
                 txtPhone.Text = row.Cells["Phone"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtAddress.Text = row.Cells["Address"].Value.ToString();
