@@ -49,12 +49,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
             this.panel1.SuspendLayout();
@@ -253,10 +253,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button14);
@@ -303,18 +303,6 @@
             this.button10.Text = "Logout";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(49, 487);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 41);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Order Details";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.SkyBlue;
@@ -356,7 +344,7 @@
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(49, 559);
+            this.button1.Location = new System.Drawing.Point(49, 493);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 41);
             this.button1.TabIndex = 24;
@@ -374,6 +362,18 @@
             this.button4.TabIndex = 21;
             this.button4.Text = "Suppliers";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.SkyBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(49, 565);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(240, 41);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Reports";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // Suppliers
             // 
@@ -420,9 +420,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button5;
     }
 }
