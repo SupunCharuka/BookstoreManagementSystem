@@ -69,5 +69,93 @@ namespace BookstoreManagementSystem
         {
             Application.Exit(); 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?",
+                                       "Confirm Logout",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Clear session data
+                ClearUserSession();
+
+                // Show login form
+                ShowLoginForm();
+
+                // Close current dashboard
+                this.Close();
+            }
+        }
+
+        private void ClearUserSession()
+        {
+            UserSession.CurrentUserId = 0;
+            UserSession.Username = null;
+            UserSession.Role = null;
+        }
+
+        private void ShowLoginForm()
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+        }
+
+        private void booksBtn_Click(object sender, EventArgs e)
+        {
+            Books booksForm = new Books();
+            booksForm.Show();
+            this.Hide();
+        }
+
+        private void staffBtn_Click(object sender, EventArgs e)
+        {
+            Users usersForm = new Users();
+            usersForm.Show();
+            this.Hide();
+        }
+
+        private void customersBtn_Click(object sender, EventArgs e)
+        {
+            Customers customersForm = new Customers();
+            customersForm.Show();
+            this.Hide();
+        }
+
+        private void supplierBtn_Click(object sender, EventArgs e)
+        {
+            Suppliers suppliersForm = new Suppliers();
+            suppliersForm.Show();
+            this.Hide();
+        }
+
+        private void ordersBtn_Click(object sender, EventArgs e)
+        {
+            Orders ordersForm = new Orders();
+            ordersForm.Show();
+            this.Hide();
+        }
+
+        private void salesBtn_Click(object sender, EventArgs e)
+        {
+            Sales salesForm = new Sales();
+            salesForm.Show();
+            this.Hide();
+        }
+
+        private void reportsBtn_Click(object sender, EventArgs e)
+        {
+            Reports reportsForm = new Reports();
+            reportsForm.Show();
+            this.Hide();
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

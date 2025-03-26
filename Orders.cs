@@ -24,7 +24,15 @@ namespace BookstoreManagementSystem
             LoadBooks();
             LoadDeliveryOptions();
             printDocument.PrintPage += printDocument1_PrintPage;
-
+            SetupUIBasedOnRole();
+        }
+        private void SetupUIBasedOnRole()
+        {
+            if (UserSession.Role == "SalesClerk")
+            {
+                staffBtn.Visible = false;
+                reportsBtn.Visible = false;
+            }
         }
 
         private void LoadCustomers()
@@ -82,7 +90,26 @@ namespace BookstoreManagementSystem
 
         private void button12_Click(object sender, EventArgs e)
         {
-
+            if (UserSession.Role == "Admin")
+            {
+                AdminDashboard adminDashboard = new AdminDashboard();
+                adminDashboard.Show();
+                this.Hide();
+            }
+            else if (UserSession.Role == "SalesClerk")
+            {
+                SalesDashboard salesDashboard = new SalesDashboard();
+                salesDashboard.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Unknown user role. Please contact support.",
+                              "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Return to login
+                Login login = new Login();
+                login.Show();
+            }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -463,6 +490,100 @@ namespace BookstoreManagementSystem
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+    
+
+       
+   
+   
+
+      
+
+ 
+  
+
+        private void staffBtn_Click_1(object sender, EventArgs e)
+        {
+            Users usersForm = new Users();
+            usersForm.Show();
+            this.Hide();
+        }
+
+        private void booksBtn_Click_1(object sender, EventArgs e)
+        {
+            Books booksForm = new Books();
+            booksForm.Show();
+            this.Hide();
+        }
+
+        private void customersBtn_Click_1(object sender, EventArgs e)
+        {
+            Customers customersForm = new Customers();
+            customersForm.Show();
+            this.Hide();
+        }
+
+        private void supplierBtn_Click_1(object sender, EventArgs e)
+        {
+            Suppliers suppliersForm = new Suppliers();
+            suppliersForm.Show();
+            this.Hide();
+        }
+
+        private void ordersBtn_Click_1(object sender, EventArgs e)
+        {
+            Orders ordersForm = new Orders();
+            ordersForm.Show();
+            this.Hide();
+        }
+
+        private void salesBtn_Click_1(object sender, EventArgs e)
+        {
+            Sales salesForm = new Sales();
+            salesForm.Show();
+            this.Hide();
+        }
+
+        private void reportsBtn_Click_1(object sender, EventArgs e)
+        {
+            Reports reportsForm = new Reports();
+            reportsForm.Show();
+            this.Hide();
+        }
+
+        private void logoutBtn_Click_1(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?",
+                                           "Confirm Logout",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Clear session data
+                ClearUserSession();
+
+                // Show login form
+                ShowLoginForm();
+
+                // Close current dashboard
+                this.Close();
+            }
+        }
+
+        private void ClearUserSession()
+        {
+            UserSession.CurrentUserId = 0;
+            UserSession.Username = null;
+            UserSession.Role = null;
+        }
+
+        private void ShowLoginForm()
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
         }
     }
     public class OrderItem

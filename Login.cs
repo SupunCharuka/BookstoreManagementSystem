@@ -69,6 +69,7 @@ namespace BookstoreManagementSystem
                 {
                     UserSession.CurrentUserId = reader.GetInt32("Id");
                     UserSession.Username = reader.GetString("Username");
+                    UserSession.Role = reader.GetString("Role");
                     string role = reader["Role"].ToString();
                     OpenDashboard(role); 
                 }
@@ -146,6 +147,6 @@ namespace BookstoreManagementSystem
     {
         public static int CurrentUserId { get; set; }
         public static string Username { get; set; }
-        // Add other user properties as needed
+        public static string Role { get; set; }
     }
 }

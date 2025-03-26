@@ -67,5 +67,97 @@ namespace BookstoreManagementSystem
         {
             Application.Exit();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?",
+                                       "Confirm Logout",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Clear session data
+                ClearUserSession();
+
+                // Show login form
+                ShowLoginForm();
+
+                // Close current dashboard
+                this.Close();
+            }
+        }
+
+        private void ClearUserSession()
+        {
+            UserSession.CurrentUserId = 0;
+            UserSession.Username = null;
+            UserSession.Role = null;
+        }
+
+        private void ShowLoginForm()
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+        }
+
+        private void booksBtn_Click(object sender, EventArgs e)
+        {
+            Books booksForm = new Books();
+            booksForm.Show();
+            this.Hide();
+        }
+
+        private void customersBtn_Click(object sender, EventArgs e)
+        {
+            Customers customersForm = new Customers();
+            customersForm.Show();
+            this.Hide();
+        }
+
+        private void supplierBtn_Click(object sender, EventArgs e)
+        {
+            Suppliers suppliersForm = new Suppliers();
+            suppliersForm.Show();
+            this.Hide();
+        }
+
+        private void ordersBtn_Click(object sender, EventArgs e)
+        {
+            Orders ordersForm = new Orders();
+            ordersForm.Show();
+            this.Hide();
+        }
+
+        private void salesBtn_Click(object sender, EventArgs e)
+        {
+            Sales salesForm = new Sales();
+            salesForm.Show();
+            this.Hide();
+        }
+
+        private void dashboardBtn_Click(object sender, EventArgs e)
+        {
+            if (UserSession.Role == "Admin")
+            {
+                AdminDashboard adminDashboard = new AdminDashboard();
+                adminDashboard.Show();
+                this.Hide();
+            }
+            else if (UserSession.Role == "SalesClerk")
+            {
+                SalesDashboard salesDashboard = new SalesDashboard();
+                salesDashboard.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Unknown user role. Please contact support.",
+                              "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Return to login
+                Login login = new Login();
+                login.Show();
+            }
+        }
     }
 }

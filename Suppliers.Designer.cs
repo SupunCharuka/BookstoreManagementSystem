@@ -46,15 +46,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.reportsBtn = new System.Windows.Forms.Button();
+            this.ordersBtn = new System.Windows.Forms.Button();
+            this.customersBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.staffBtn = new System.Windows.Forms.Button();
+            this.dashboardBtn = new System.Windows.Forms.Button();
+            this.booksBtn = new System.Windows.Forms.Button();
+            this.salesBtn = new System.Windows.Forms.Button();
+            this.supplierBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
             this.panel1.SuspendLayout();
@@ -253,127 +253,136 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.reportsBtn);
+            this.panel1.Controls.Add(this.ordersBtn);
+            this.panel1.Controls.Add(this.customersBtn);
+            this.panel1.Controls.Add(this.logoutBtn);
+            this.panel1.Controls.Add(this.staffBtn);
+            this.panel1.Controls.Add(this.dashboardBtn);
+            this.panel1.Controls.Add(this.booksBtn);
+            this.panel1.Controls.Add(this.salesBtn);
+            this.panel1.Controls.Add(this.supplierBtn);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(339, 701);
             this.panel1.TabIndex = 6;
             // 
-            // button2
+            // reportsBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(49, 414);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 41);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Orders";
-            this.button2.UseVisualStyleBackColor = false;
+            this.reportsBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.reportsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.reportsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportsBtn.Location = new System.Drawing.Point(49, 565);
+            this.reportsBtn.Name = "reportsBtn";
+            this.reportsBtn.Size = new System.Drawing.Size(240, 41);
+            this.reportsBtn.TabIndex = 47;
+            this.reportsBtn.Text = "Reports";
+            this.reportsBtn.UseVisualStyleBackColor = false;
+            this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click_1);
             // 
-            // button9
+            // ordersBtn
             // 
-            this.button9.BackColor = System.Drawing.Color.SkyBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(49, 246);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(240, 41);
-            this.button9.TabIndex = 45;
-            this.button9.Text = "Customers";
-            this.button9.UseVisualStyleBackColor = false;
+            this.ordersBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.ordersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ordersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordersBtn.Location = new System.Drawing.Point(49, 332);
+            this.ordersBtn.Name = "ordersBtn";
+            this.ordersBtn.Size = new System.Drawing.Size(240, 41);
+            this.ordersBtn.TabIndex = 46;
+            this.ordersBtn.Text = "Orders";
+            this.ordersBtn.UseVisualStyleBackColor = false;
+            this.ordersBtn.Click += new System.EventHandler(this.ordersBtn_Click_1);
             // 
-            // button10
+            // customersBtn
             // 
-            this.button10.BackColor = System.Drawing.Color.SkyBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(49, 636);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(240, 41);
-            this.button10.TabIndex = 44;
-            this.button10.Text = "Logout";
-            this.button10.UseVisualStyleBackColor = false;
+            this.customersBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.customersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.customersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersBtn.Location = new System.Drawing.Point(49, 164);
+            this.customersBtn.Name = "customersBtn";
+            this.customersBtn.Size = new System.Drawing.Size(240, 41);
+            this.customersBtn.TabIndex = 45;
+            this.customersBtn.Text = "Customers";
+            this.customersBtn.UseVisualStyleBackColor = false;
+            this.customersBtn.Click += new System.EventHandler(this.customersBtn_Click_1);
             // 
-            // button12
+            // logoutBtn
             // 
-            this.button12.BackColor = System.Drawing.Color.SkyBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(49, 172);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(240, 41);
-            this.button12.TabIndex = 41;
-            this.button12.Text = "Staff";
-            this.button12.UseVisualStyleBackColor = false;
+            this.logoutBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(49, 636);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(240, 41);
+            this.logoutBtn.TabIndex = 44;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // button13
+            // staffBtn
             // 
-            this.button13.BackColor = System.Drawing.Color.SkyBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(49, 15);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(240, 41);
-            this.button13.TabIndex = 40;
-            this.button13.Text = "Dashboard";
-            this.button13.UseVisualStyleBackColor = false;
+            this.staffBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.staffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.staffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffBtn.Location = new System.Drawing.Point(49, 481);
+            this.staffBtn.Name = "staffBtn";
+            this.staffBtn.Size = new System.Drawing.Size(240, 41);
+            this.staffBtn.TabIndex = 41;
+            this.staffBtn.Text = "Staff";
+            this.staffBtn.UseVisualStyleBackColor = false;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click_1);
             // 
-            // button14
+            // dashboardBtn
             // 
-            this.button14.BackColor = System.Drawing.Color.SkyBlue;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(49, 91);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(240, 41);
-            this.button14.TabIndex = 39;
-            this.button14.Text = "Books";
-            this.button14.UseVisualStyleBackColor = false;
+            this.dashboardBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.dashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dashboardBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardBtn.Location = new System.Drawing.Point(49, 15);
+            this.dashboardBtn.Name = "dashboardBtn";
+            this.dashboardBtn.Size = new System.Drawing.Size(240, 41);
+            this.dashboardBtn.TabIndex = 40;
+            this.dashboardBtn.Text = "Dashboard";
+            this.dashboardBtn.UseVisualStyleBackColor = false;
+            this.dashboardBtn.Click += new System.EventHandler(this.dashboardBtn_Click);
             // 
-            // button1
+            // booksBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(49, 493);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 41);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Sales";
-            this.button1.UseVisualStyleBackColor = false;
+            this.booksBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.booksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.booksBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksBtn.Location = new System.Drawing.Point(49, 91);
+            this.booksBtn.Name = "booksBtn";
+            this.booksBtn.Size = new System.Drawing.Size(240, 41);
+            this.booksBtn.TabIndex = 39;
+            this.booksBtn.Text = "Books";
+            this.booksBtn.UseVisualStyleBackColor = false;
+            this.booksBtn.Click += new System.EventHandler(this.booksBtn_Click_1);
             // 
-            // button4
+            // salesBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(49, 335);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 41);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Suppliers";
-            this.button4.UseVisualStyleBackColor = false;
+            this.salesBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.salesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.salesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesBtn.Location = new System.Drawing.Point(49, 411);
+            this.salesBtn.Name = "salesBtn";
+            this.salesBtn.Size = new System.Drawing.Size(240, 41);
+            this.salesBtn.TabIndex = 24;
+            this.salesBtn.Text = "Sales";
+            this.salesBtn.UseVisualStyleBackColor = false;
+            this.salesBtn.Click += new System.EventHandler(this.salesBtn_Click_1);
             // 
-            // button5
+            // supplierBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.SkyBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(49, 565);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 41);
-            this.button5.TabIndex = 47;
-            this.button5.Text = "Reports";
-            this.button5.UseVisualStyleBackColor = false;
+            this.supplierBtn.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.supplierBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.supplierBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierBtn.Location = new System.Drawing.Point(49, 253);
+            this.supplierBtn.Name = "supplierBtn";
+            this.supplierBtn.Size = new System.Drawing.Size(240, 41);
+            this.supplierBtn.TabIndex = 21;
+            this.supplierBtn.Text = "Suppliers";
+            this.supplierBtn.UseVisualStyleBackColor = false;
+            this.supplierBtn.Click += new System.EventHandler(this.supplierBtn_Click_1);
             // 
             // Suppliers
             // 
@@ -415,14 +424,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button salesBtn;
+        private System.Windows.Forms.Button supplierBtn;
+        private System.Windows.Forms.Button ordersBtn;
+        private System.Windows.Forms.Button customersBtn;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button staffBtn;
+        private System.Windows.Forms.Button dashboardBtn;
+        private System.Windows.Forms.Button booksBtn;
+        private System.Windows.Forms.Button reportsBtn;
     }
 }
