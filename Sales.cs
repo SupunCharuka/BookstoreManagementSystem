@@ -177,8 +177,8 @@ namespace BookstoreManagementSystem
                             foreach (var item in saleItems)
                             {
                                 string itemQuery = @"
-                        INSERT INTO sale_items (sale_id, book_id, quantity, price, subtotal)
-                        VALUES (@saleId, @bookId, @quantity, @price, @subtotal)";
+                                INSERT INTO sale_items (sale_id, book_id, quantity, price, subtotal)
+                                VALUES (@saleId, @bookId, @quantity, @price, @subtotal)";
 
                                 using (MySqlCommand cmd = new MySqlCommand(itemQuery, conn, transaction))
                                 {
@@ -188,6 +188,18 @@ namespace BookstoreManagementSystem
                                     cmd.Parameters.AddWithValue("@price", item.Price);
                                     cmd.Parameters.AddWithValue("@subtotal", item.Subtotal);
                                     cmd.ExecuteNonQuery();
+                                }
+
+                                string stockQuery = @"
+                                UPDATE Books 
+                                SET StockQuantity = StockQuantity - @quantity 
+                                WHERE BookID = @bookId";
+
+                                using (MySqlCommand stockCmd = new MySqlCommand(stockQuery, conn, transaction))
+                                {
+                                    stockCmd.Parameters.AddWithValue("@quantity", item.Quantity);
+                                    stockCmd.Parameters.AddWithValue("@bookId", item.BookId);
+                                    stockCmd.ExecuteNonQuery();
                                 }
                             }
 

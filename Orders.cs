@@ -256,6 +256,12 @@ namespace BookstoreManagementSystem
                 INSERT INTO OrderItems (OrderId, BookId, Quantity, Price, TotalPrice)
                 VALUES (@OrderId, @BookId, @Quantity, @Price, @TotalPrice)";
 
+
+                string updateStockQuery = @"
+                UPDATE Books 
+                SET StockQuantity = StockQuantity - @Quantity 
+                WHERE BookID = @BookId";
+
                 using (MySqlConnection conn = new MySqlConnection(con))
                 {
                     conn.Open();
@@ -267,6 +273,14 @@ namespace BookstoreManagementSystem
                         cmd.Parameters.AddWithValue("@Price", item.Price);
                         cmd.Parameters.AddWithValue("@TotalPrice", item.TotalPrice);
                         cmd.ExecuteNonQuery();
+                    }
+
+                    // Update Stock
+                    using (MySqlCommand updateCmd = new MySqlCommand(updateStockQuery, conn))
+                    {
+                        updateCmd.Parameters.AddWithValue("@Quantity", item.Quantity);
+                        updateCmd.Parameters.AddWithValue("@BookId", item.BookId);
+                        updateCmd.ExecuteNonQuery();
                     }
                 }
             }

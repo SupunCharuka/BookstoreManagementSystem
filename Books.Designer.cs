@@ -159,7 +159,7 @@
             "Engineering",
             "Mathematics",
             "Political "});
-            this.cmbGenre.Location = new System.Drawing.Point(667, 106);
+            this.cmbGenre.Location = new System.Drawing.Point(27, 109);
             this.cmbGenre.Name = "cmbGenre";
             this.cmbGenre.Size = new System.Drawing.Size(249, 37);
             this.cmbGenre.TabIndex = 35;
@@ -169,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(662, 74);
+            this.label3.Location = new System.Drawing.Point(22, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 34;
@@ -309,7 +309,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 77);
+            this.label2.Location = new System.Drawing.Point(662, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 12;
@@ -319,7 +319,7 @@
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(27, 109);
+            this.txtTitle.Location = new System.Drawing.Point(667, 109);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(240, 34);
             this.txtTitle.TabIndex = 11;
