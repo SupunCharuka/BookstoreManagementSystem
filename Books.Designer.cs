@@ -195,6 +195,7 @@
             this.dataGridViewBooks.RowTemplate.Height = 24;
             this.dataGridViewBooks.Size = new System.Drawing.Size(915, 297);
             this.dataGridViewBooks.TabIndex = 32;
+            this.dataGridViewBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellClick);
             this.dataGridViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellContentClick);
             this.dataGridViewBooks.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_RowEnter);
             // 

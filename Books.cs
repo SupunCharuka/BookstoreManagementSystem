@@ -40,8 +40,8 @@ namespace BookstoreManagementSystem
                 {
                     connection.Open();
                     string query = "SELECT BookID, Title, Author, Genre, ISBN, Price, StockQuantity FROM Books";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                 
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, con);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
                     dataGridViewBooks.DataSource = dataTable;
@@ -250,17 +250,7 @@ namespace BookstoreManagementSystem
 
         private void dataGridViewBooks_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewBooks.Rows[e.RowIndex];
-
-                txtTitle.Text = row.Cells["Title"].Value?.ToString() ?? "";
-                txtAuthor.Text = row.Cells["Author"].Value?.ToString() ?? "";
-                cmbGenre.SelectedItem = row.Cells["Genre"].Value?.ToString() ?? null;
-                txtISBN.Text = row.Cells["ISBN"].Value?.ToString() ?? "";
-                txtPrice.Text = row.Cells["Price"].Value?.ToString() ?? "";
-                txtStockQuantity.Text = row.Cells["StockQuantity"].Value?.ToString() ?? "";
-            }
+           
         }
 
 
@@ -382,6 +372,21 @@ namespace BookstoreManagementSystem
                 // Return to login
                 Login login = new Login();
                 login.Show();
+            }
+        }
+
+        private void dataGridViewBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewBooks.Rows[e.RowIndex];
+
+                txtTitle.Text = row.Cells["Title"].Value?.ToString() ?? "";
+                txtAuthor.Text = row.Cells["Author"].Value?.ToString() ?? "";
+                cmbGenre.SelectedItem = row.Cells["Genre"].Value?.ToString() ?? null;
+                txtISBN.Text = row.Cells["ISBN"].Value?.ToString() ?? "";
+                txtPrice.Text = row.Cells["Price"].Value?.ToString() ?? "";
+                txtStockQuantity.Text = row.Cells["StockQuantity"].Value?.ToString() ?? "";
             }
         }
     }

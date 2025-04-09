@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.printReceiptBtn = new System.Windows.Forms.Button();
             this.applyDiscount = new System.Windows.Forms.Button();
             this.addSale = new System.Windows.Forms.Button();
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
@@ -92,7 +91,6 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.clearBtn);
-            this.panel2.Controls.Add(this.printReceiptBtn);
             this.panel2.Controls.Add(this.applyDiscount);
             this.panel2.Controls.Add(this.addSale);
             this.panel2.Controls.Add(this.cmbPaymentMethod);
@@ -189,26 +187,13 @@
             this.clearBtn.BackColor = System.Drawing.Color.Moccasin;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn.Location = new System.Drawing.Point(502, 645);
+            this.clearBtn.Location = new System.Drawing.Point(266, 645);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(192, 42);
             this.clearBtn.TabIndex = 79;
             this.clearBtn.Text = "Clear Form";
             this.clearBtn.UseVisualStyleBackColor = false;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
-            // 
-            // printReceiptBtn
-            // 
-            this.printReceiptBtn.BackColor = System.Drawing.Color.Moccasin;
-            this.printReceiptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printReceiptBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printReceiptBtn.Location = new System.Drawing.Point(266, 645);
-            this.printReceiptBtn.Name = "printReceiptBtn";
-            this.printReceiptBtn.Size = new System.Drawing.Size(192, 42);
-            this.printReceiptBtn.TabIndex = 78;
-            this.printReceiptBtn.Text = "Print Receipt";
-            this.printReceiptBtn.UseVisualStyleBackColor = false;
-            this.printReceiptBtn.Click += new System.EventHandler(this.button4_Click);
             // 
             // applyDiscount
             // 
@@ -697,7 +682,6 @@
         private System.Windows.Forms.ComboBox cmbPaymentMethod;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.Button printReceiptBtn;
         private System.Windows.Forms.Button applyDiscount;
         private System.Windows.Forms.Button addSale;
         private System.Windows.Forms.Label label10;

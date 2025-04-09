@@ -105,6 +105,7 @@
             this.dgvSuppliers.Size = new System.Drawing.Size(915, 297);
             this.dgvSuppliers.TabIndex = 32;
             this.dgvSuppliers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellClick);
+            this.dgvSuppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellContentClick);
             // 
             // editBtn
             // 

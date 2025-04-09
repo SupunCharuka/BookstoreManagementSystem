@@ -208,6 +208,11 @@ namespace BookstoreManagementSystem
 
                             // Show success and clear form
                             MessageBox.Show($"Sale #{insertedSaleId} saved successfully!");
+                           
+
+                            // Show print preview
+                            printPreviewDialog.Document = printDocument;
+                            printPreviewDialog.ShowDialog();
                             ClearForm();
                         }
                         catch (Exception ex)
@@ -391,15 +396,7 @@ namespace BookstoreManagementSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (saleItems.Count == 0)
-            {
-                MessageBox.Show("No items to print. Please add items to the sale.");
-                return;
-            }
-
-            // Show print preview
-            printPreviewDialog.Document = printDocument;
-            printPreviewDialog.ShowDialog();
+            
         }
 
         private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
